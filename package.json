@@ -1,0 +1,72 @@
+{
+  "name": "BekkuHome",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@svg-maps/south-korea": "^1.0.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/axios": "^0.14.0",
+    "@types/csvtojson": "^2.0.0",
+    "@types/d3": "^5.16.4",
+    "@types/google-map-react": "^2.1.3",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/styled-components": "^5.1.15",
+    "@types/topojson-client": "^3.1.0",
+    "axios": "^0.24.0",
+    "bootstrap": "^5.1.3",
+    "d3": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "geojson-to-svg": "^1.1.4",
+    "google-map-react": "^2.1.10",
+    "mobx": "^6.3.5",
+    "mobx-react": "^7.2.0",
+    "react": "^17.0.2",
+    "react-analytics-charts": "^1.2.12",
+    "react-bootstrap": "^2.0.1",
+    "react-dom": "^17.0.2",
+    "react-google-charts": "^3.0.15",
+    "react-naver-maps": "0.0.13",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-svg-map": "^2.2.0",
+    "react-typescript-datamaps": "^1.0.3",
+    "react-use-analytics-api": "^1.4.16",
+    "styled-components": "^5.3.3",
+    "topojson-client": "^3.1.0",
+    "tui-chart": "^3.5.0",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.29"
+  }
+}

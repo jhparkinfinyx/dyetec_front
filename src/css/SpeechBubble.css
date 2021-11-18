@@ -1,0 +1,150 @@
+.speech-bubble {
+  margin: 0 auto;
+  position: relative;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #fff;
+  border: 8px solid #666;
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px #888;
+}
+
+.speech-bubble:before {
+  border: 25px solid;
+  border-color: #666 transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  border: 14px solid;
+  border-color: #fff transparent 
+}
+
+
+
+.si-wrapper-top {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: -40px;
+  margin-left: 0;
+  -webkit-transform: translate(-50%,-100%);
+  transform: translate(-50%,-100%);
+}
+
+.gm-style {
+  font: 400 11px Roboto, Arial, sans-serif;
+  text-decoration: none;
+}
+
+
+
+element.style {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.si-wrapper-top {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: -40px;
+  margin-left: 0;
+  -webkit-transform: translate(-50%,-100%);
+  transform: translate(-50%,-100%);
+}
+
+[class*='si-wrapper'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  cursor: default;
+}
+.si-float-wrapper, .si-float-wrapper * {
+  box-sizing: border-box;
+}
+
+.si-shadow-wrapper-top, .si-shadow-wrapper-bottom {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+[class*='si-shadow-wrapper'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .29804;
+  z-index: 1;
+}
+.si-float-wrapper, .si-float-wrapper * {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+.si-wrapper-top {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: -40px;
+  margin-left: 0;
+  -webkit-transform: translate(-50%,-100%);
+  transform: translate(-50%,-100%);
+}
+[class*='si-wrapper'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  cursor: default;
+}
+style attribute {
+  position: absolute;
+  z-index: 0;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  border-width: 0px;
+  margin: 0px;
+  cursor: url(https://maps.gstatic.com/mapfiles/openhand_8_8.cur), default;
+  touch-action: none;
+}
+
+.gm-style {
+  font: 400 11px Roboto, Arial, sans-serif;
+  text-decoration: none;
+}
