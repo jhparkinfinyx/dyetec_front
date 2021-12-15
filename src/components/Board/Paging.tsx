@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { observer } from "mobx-react";
-import styled from 'styled-components';
 
+import Pagination from 'react-js-pagination';
+
+import styled from 'styled-components';
+import useStore from 'stores/useStore';
+
+import '../../css/page.css';
 
 const Div = styled.div`
   display: flex;
@@ -64,23 +69,19 @@ const Div = styled.div`
   }
 `;
 
-const Paging = observer(({}) => {
+const Paging = observer(({page, count, setPage}) => {
   
-  return (
-    <Div>
-        <a href="https://dive.dyetec.or.kr/pages/product_list.php#" className="active" style={{paddingLeft:"12px"}}>1</a>
-        <a href="https://dive.dyetec.or.kr/pages/product_list.php?p=2&amp;search=&amp;order=0&amp;cate1=0&amp;cate2=0">2</a>
-        <a href="https://dive.dyetec.or.kr/pages/product_list.php?p=3&amp;search=&amp;order=0&amp;cate1=0&amp;cate2=0">3</a>
-        <a href="https://dive.dyetec.or.kr/pages/product_list.php?p=4&amp;search=&amp;order=0&amp;cate1=0&amp;cate2=0">4</a>
-        <a href="https://dive.dyetec.or.kr/pages/product_list.php?p=5&amp;search=&amp;order=0&amp;cate1=0&amp;cate2=0">5</a>
-        <a href="https://dive.dyetec.or.kr/pages/product_list.php?p=6&amp;search=&amp;order=0&amp;cate1=0&amp;cate2=0" className="btn-next">Next</a>
-        <li>
-          <a href="https://dive.dyetec.or.kr/pages/product_list.php?p=19&amp;search=&amp;order=0&amp;cate1=0&amp;cate2=0" className="btn-paging">
-            <img src="/images/ico_arrow_paging1.png" alt="끝" />
-          </a>
-        </li>
-    </Div>
-	)
+    return (
+      <Pagination 
+        activePage={page} 
+        itemsCountPerPage={30} 
+        totalItemsCount={count} 
+        pageRangeDisplayed={5} 
+        prevPageText={"‹"} 
+        nextPageText={"›"}
+        onChange={setPage} 
+      />
+    );
 });
 
 export default Paging;

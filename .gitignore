@@ -1,4 +1,12 @@
 /node_modules
-/build
-.env
-*.csv
+# .env
+# *.csv
+/public
+/service
+/src
+app.ts
+package-lock.json
+package.json
+README.md
+/tsconfig.json
+yarn.lock

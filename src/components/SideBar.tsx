@@ -5,7 +5,7 @@ from 'react-bootstrap';
 const SideBar = () => (
   <Navbar bg="light" expand={false}>
       <Container fluid>
-        <Navbar.Brand href="/">어르신 거동불편 노후아파트 현황</Navbar.Brand>
+        <Navbar.Brand href="/">다이텍 프로젝트</Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
@@ -17,28 +17,11 @@ const SideBar = () => (
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="/">현황</Nav.Link>
+              <Nav.Link href="/">홈</Nav.Link>
               {/* <Nav.Link href="/chart">통계</Nav.Link> */}
-              <Nav.Link href="/discussion">토론방</Nav.Link>
-              <Nav.Link href="/data">자료방</Nav.Link>
-              {/* <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown> */}
+              <Nav.Link href="/similar">비슷한</Nav.Link>
+              <Nav.Link href="/drape">드레이프</Nav.Link>
             </Nav>
-            {/* <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form> */}
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
