@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { observer } from "mobx-react";
 import styled from 'styled-components';
+import { Button } from 'react-bootstrap';
+import SpinnerButton from '../SpinnerButton';
 
 const Div = styled.div`
   display: flex;
@@ -32,11 +34,19 @@ const AlignTool = styled.div`
   a { text-decoration: none; }
 `;
 
-const BoardUtil = observer(({count}) => {
+const BoardUtil = observer(({count, onDownloadBtn }) => {
+  const [isButtonOn, setIsButtonON] = useState(false);
 
   return (
     <Div>
         <BoardCount className="board-count">전체 : <span id="totalCnt">{count}</span></BoardCount>
+        {
+          count > 0 ? <Button className='downBtn' onClick={onDownloadBtn} style={{background:"#1c2a4e", fontSize:"12px", borderColor:"none", outline: "none", boxShadow:"none"}}>캡쳐</Button> 
+          :
+          <div></div>
+        }
+        
+        {/* <SpinnerButton click={onDownloadBtn} disabled={isButtonOn } name={'캡쳐'} /> */}
     </Div>
 	)
 });

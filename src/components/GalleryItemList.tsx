@@ -7,6 +7,8 @@ import styled from 'styled-components';
 import useStore from '../stores/useStore';
 import GalleryItem from './Board/GalleryItem';
 
+import '../css/gallery.css';
+
 const Div = styled.div`
 display: flex; 
   flex-wrap: wrap;
@@ -194,7 +196,7 @@ const GalleryItemList = observer(({page, list}) => {
     <Row xs={12} sm={12} md={12} lg={12} xl={12} >
        {
           fabricStore.getSelectedImg != undefined ? 
-          <Col xs={12} sm={12} md={12} lg={3} xl={3} style={{marginLeft: "auto", marginRight: "auto", borderRight: "1px dashed #333", marginBottom: "40px" }} >
+          <Col className="col-boler1" xs={12} sm={12} md={12} lg={12} xl={12} xxl={3} style={{ }} >
             <h1 style={{paddingLeft:"5px", fontSize:"20px"}}>검색 이미지</h1>
             <Div id="list" style={{}}>
               <div key={0} onClick={() => {/* 상세 페이지로 이동 */}}>
@@ -208,7 +210,7 @@ const GalleryItemList = observer(({page, list}) => {
             </Div>
 
           </Col> :
-          <Col xs={12} sm={12} md={12} lg={3} xl={3} style={{marginLeft: "auto", marginRight: "auto", alignSelf: "center", marginBottom: "40px", borderRight: "1px dashed #333" }} >
+          <Col className="col-boler2" xs={12} sm={12} md={12} lg={12} xl={12} xxl={3} style={{marginLeft: "auto", marginRight: "auto", alignSelf: "center", marginBottom: "40px", /*borderRight: "1px dashed #333"*/ }} >
             <h1 style={{paddingLeft:"5px", fontSize:"20px"}}>검색 이미지</h1>
             <Div id="list" style={{alignItems: "center", height:"456px" }}>선택된 이미지가 없습니다.</Div>
           </Col>
@@ -216,7 +218,7 @@ const GalleryItemList = observer(({page, list}) => {
        }
       
       
-      <Col className="second-col" xs={12} sm={12} md={12} lg={9} xl={9} style={{marginBottom: "40px"}}>
+      <Col className="second-col" xs={12} sm={12} md={12} lg={12} xl={12} xxl={9} style={{marginBottom: "40px"}}>
       <h1 style={{paddingLeft:"5px", fontSize:"20px"}}>유사 이미지</h1>
       {
         itemList.length > 0 ? 

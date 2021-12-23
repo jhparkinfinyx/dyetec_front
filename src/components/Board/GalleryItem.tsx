@@ -8,7 +8,7 @@ import FabricService from 'services/FabricService';
 
 const GalleryItem = observer(({item, page}) => {
   const { fabricStore } = useStore();
-  const url = SERVER_URL + "/" + item[3].replace(/[!@#$%^&＊*()+=\-[\]\\';,./{}|":<>?~_]/g, "\\$&").replaceAll(" ", "%20");
+  let url = SERVER_URL + "/" + item[3];//.replace(/[!@#$%^&＊*()+=\-[\]\\';,./{}|":<>?~_]/g, "\\$&").replaceAll(" ", "%20");
   // console.log(url)
 
 
@@ -30,10 +30,11 @@ const GalleryItem = observer(({item, page}) => {
       alert('파일 삭제 실패！')
 		});
   }
-
+  // url = url+"?auto=compress&cs=tinysrgb&h=350";
   return (
       <li key={item[1]} onClick={() => {/* 상세 페이지로 이동 */}}>
-        <div className="fabric_list_thumb" style={{backgroundImage: `url(${url})`}}></div>
+        {/* <div className="fabric_list_thumb" style={{backgroundImage: `url(${url})`}}></div> */}
+        <img crossOrigin="anonymous" className="fabric_list_thumb" src={url} alt="new" />
         {
           page === 'upload' ?<button style={{float:"right", textDecoration: "none", border: "none", width: "20px", height: "20px", fontSize: "15px"}} id={item[1]} onClick={(e) => {
             handleDeleteButton(e);

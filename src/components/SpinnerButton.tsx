@@ -12,7 +12,7 @@ const MyButton = styled.button`
 	display: block; 
 	min-width: 170px; 
 	height: 36px; 
-	margin: 0px auto 0; 
+	// margin: 0px auto 0; 
 	padding: 0 44px; 
 	border: none; 
 	border-radius: 4px; 
