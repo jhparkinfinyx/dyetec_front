@@ -193,11 +193,11 @@ const GalleryItemList = observer(({page, list}) => {
 
   // alert("basketlist:"+JSON.stringify(itemList));
   return (
-    <Row xs={12} sm={12} md={12} lg={12} xl={12} >
+    <Row xs={12} sm={12} md={12} lg={12} xl={12} style={{background:"white", width: "99%"}}>
        {
           fabricStore.getSelectedImg != undefined ? 
           <Col className="col-boler1" xs={12} sm={12} md={12} lg={12} xl={12} xxl={3} style={{ }} >
-            <h1 style={{paddingLeft:"5px", fontSize:"20px"}}>검색 이미지</h1>
+            <h1 style={{paddingLeft:"5px", fontSize:"20px", textAlignLast:"center", background:"white"}}>검색 이미지</h1>
             <Div id="list" style={{}}>
               <div key={0} onClick={() => {/* 상세 페이지로 이동 */}}>
                 <div className="fabric_list_thumb" style={{}}>
@@ -210,16 +210,16 @@ const GalleryItemList = observer(({page, list}) => {
             </Div>
 
           </Col> :
-          <Col className="col-boler2" xs={12} sm={12} md={12} lg={12} xl={12} xxl={3} style={{marginLeft: "auto", marginRight: "auto", alignSelf: "center", marginBottom: "40px", /*borderRight: "1px dashed #333"*/ }} >
-            <h1 style={{paddingLeft:"5px", fontSize:"20px"}}>검색 이미지</h1>
+          <Col className="col-boler2" xs={12} sm={12} md={12} lg={12} xl={12} xxl={3} style={{marginLeft: "auto", marginRight: "auto", alignSelf: "center", marginBottom: "40px", background:"white", /*borderRight: "1px dashed #333"*/ }} >
+            <h1 style={{paddingLeft:"5px", fontSize:"20px", textAlignLast:"center"}}>검색 이미지</h1>
             <Div id="list" style={{alignItems: "center", height:"456px" }}>선택된 이미지가 없습니다.</Div>
           </Col>
 
        }
       
       
-      <Col className="second-col" xs={12} sm={12} md={12} lg={12} xl={12} xxl={9} style={{marginBottom: "40px"}}>
-      <h1 style={{paddingLeft:"5px", fontSize:"20px"}}>유사 이미지</h1>
+      <Col className="second-col" xs={12} sm={12} md={12} lg={12} xl={12} xxl={9} style={{marginBottom: "40px", background:"white"}}>
+      <h1 style={{paddingLeft:"5px", fontSize:"20px", textAlignLast:"center"}}>유사 이미지</h1>
       {
         itemList.length > 0 ? 
           <Ol id="list">{itemList}</Ol> 

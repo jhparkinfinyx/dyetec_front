@@ -34,14 +34,18 @@ const AlignTool = styled.div`
   a { text-decoration: none; }
 `;
 
-const BoardUtil = observer(({count, onDownloadBtn }) => {
+const BoardUtil = observer(({count, isModalShow, onCaptureModal, onDownloadBtn }) => {
   const [isButtonOn, setIsButtonON] = useState(false);
 
+  const captureBtnName = isModalShow ? "이미지 다운로드" : "캡쳐하기";
   return (
     <Div>
         <BoardCount className="board-count">전체 : <span id="totalCnt">{count}</span></BoardCount>
         {
-          count > 0 ? <Button className='downBtn' onClick={onDownloadBtn} style={{background:"#1c2a4e", fontSize:"12px", borderColor:"none", outline: "none", boxShadow:"none"}}>캡쳐</Button> 
+          count > 0 && !isModalShow ? 
+          <div>
+            <Button onClick={ isModalShow ? onDownloadBtn : onCaptureModal } style={{background:"#1c2a4e", fontSize:"12px", borderColor:"none", outline: "none", boxShadow:"none"}}>{captureBtnName}</Button>
+          </div>
           :
           <div></div>
         }

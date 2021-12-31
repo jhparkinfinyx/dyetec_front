@@ -20,8 +20,13 @@ const fabricStore = observable({
 
   uploadedImg: [],
   selectedImg: undefined,
+  selectedImgStr: '',
 
   images: [],
+
+  similarity_param_info: {},
+  filteredParams: [],
+  paramMaxLength: 0,
 
   drapeValues: [
     0, 0.47, 3.51, 
@@ -40,6 +45,11 @@ const fabricStore = observable({
     }).catch(e => {
       console.log(e);
     });
+
+    this.similarity_param_info = {
+      "keys": [],
+      "values": []
+    }
   },
 
   add(newFabric) {
@@ -52,6 +62,10 @@ const fabricStore = observable({
 
   setFabricList(data) {
     this.fabricList = data; // 2중 배열 형태 : [[],[],[]]
+  },
+
+  reSetFabricList() {
+    this.fabricList = [];
   },
 
   setUploadedImg(data) {
@@ -80,6 +94,35 @@ const fabricStore = observable({
 
   setSelectedImg(data) {
     this.selectedImg = data;
+  },
+
+  setSelectedImgStr(str) {
+    this.selectedImgStr = str;
+  },
+
+  setSimilarityParamInfo(obj) {
+    this.similarity_param_info = obj;
+  },
+
+  reSetSimilarityParamInfo() {
+    this.similarity_param_info = {};
+  },
+
+  setParamMaxLength(count) {
+    if(this.paramMaxLength < count) {
+      this.paramMaxLength = count;
+    }
+  },
+  reSetParamMaxLength() {
+    this.paramMaxLength = 0;
+  },
+  
+  addFilterdParams(arr) {
+    this.filteredParams.push(arr);
+  },
+
+  reSetFilterdParams() {
+    this.filteredParams = [];
   },
 
   get getList() {
@@ -112,6 +155,22 @@ const fabricStore = observable({
 
   get getSelectedImg() {
     return this.selectedImg;
+  },
+
+  get getSelectedImgStr() {
+    return this.selectedImgStr;
+  },
+
+  get SimilarityParamInfo() {
+    return this.similarity_param_info;
+  },
+
+  get ParamMaxLength() {
+    return this.paramMaxLength;
+  },
+
+  get FilteredParams() {
+    return this.filteredParams.slice(0,5);
   }
 
 });
